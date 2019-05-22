@@ -33,7 +33,8 @@ clean:
 	rm -rf $(BUILDPATH)
 
 install:
-	go install -v $(shell go list ./... | grep -v /vendor/)
+	# go install -v $(shell go list ./... | grep -v /vendor/)
+	go install -v $(shell go list ./...)
 
 vendor-unlock:
 	find vendor/ -name vendored.git -execdir mv -i vendored.git .git \; -prune

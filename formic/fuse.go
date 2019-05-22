@@ -70,7 +70,7 @@ func (f *FuseFormic) Serve() error {
 		fuse.MaxReadahead(128 * 1024),
 		fuse.AsyncRead(),
 		//fuse.WritebackCache(),
-		fuse.AutoInvalData(),
+		// fuse.AutoInvalData(),
 	}
 	if f.allowOther {
 		mountOptions = append(mountOptions, fuse.AllowOther())
